@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성폼</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .layout {
+            background-color: white;
+            max-width: 630px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 591px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 20px;
+        }
+
+        textarea {
+            width: 591px;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            max-height: 300px;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <form action="/board/writedo" method="post">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">닉네임</label>
+            <input type="text" name="title" id="exampleFormControlInput1" placeholder="닉네임을 입력하세요.">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">게시물 내용</label><br>
+            <textarea id="exampleFormControlTextarea1" name="content" rows="5" placeholder="게시물 내용을 작성하세요."></textarea>
+        </div>
+        <div class="button-container">
+            <button type="submit">작성</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
